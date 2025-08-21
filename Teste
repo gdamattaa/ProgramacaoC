@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int ind = 1;
+    int num, menor, controle = 0;
+
+    while (ind <= 5) {
+        scanf("%d", &num);
+
+        if (controle == 0 && num % 2 == 0) {
+            // Primeiro número par encontrado
+            menor = num;
+            controle = 1; 
+        } else if (num % 2 == 0 && num < menor) {
+            // Se achar outro par menor, atualiza
+            menor = num;
+        }
+        
+        ind++;
+    }
+
+    if (controle == 1)
+        printf("Menor número par: %d\n", menor);
+    else
+        printf("Nenhum número par foi digitado.\n");
+
+    return 0;
+}

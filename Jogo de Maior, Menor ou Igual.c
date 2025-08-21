@@ -57,5 +57,4 @@ if (resultado == 1)
     printf("Infelizmente você perdeu!\n");
 }
 
-
 }
